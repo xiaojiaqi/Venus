@@ -1,0 +1,138 @@
+video {
+    background: black;
+    border: 1px solid gray;
+}
+
+.page {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 290 px;
+    height: 290 px;
+}
+
+#yours {
+    width: 80 px;
+    height: 80 px;
+    position: absolute;
+    top: 15 px;
+    right: 15 px;
+}
+
+#theirs {
+    width: 250 px;
+    height: 250 px;
+}
+
+.copy-rights {
+    position: fixed; /*or前面的是absolute就可以用*/
+    bottom: 0px;
+}
+#search_id_button {
+    /* Font & Text */
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", 微软雅黑, Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 28px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: right;
+    text-indent: 0px;
+    text-transform: none;
+    vertical-align: top;
+    white-space: normal;
+    word-spacing: 0px;
+
+    /* Color & Background */
+    background-attachment: scroll;
+    background-color: rgb(30, 159, 255);
+    background-image: none;
+    background-position: 0% 0%;
+    background-repeat: repeat;
+    color: rgb(255, 255, 255);
+
+    /* Box */
+    height: 28px;
+    width: 42px;
+    border: 1px solid rgb(30, 159, 255);
+    border-top: 1px solid rgb(30, 159, 255);
+    border-right: 1px solid rgb(30, 159, 255);
+    border-bottom: 1px solid rgb(30, 159, 255);
+    border-left: 1px solid rgb(30, 159, 255);
+    margin: 5px 5px 0px;
+    padding: 0px 15px;
+    max-height: none;
+    min-height: 0px;
+    max-width: none;
+    min-width: 0px;
+
+    /* Positioning */
+    position: static;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    left: auto;
+    float: none;
+    display: inline-block;
+    clear: none;
+    z-index: auto;
+
+    /* List */
+    list-style-image: none;
+    list-style-type: disc;
+    list-style-position: outside;
+
+    /* Table */
+    border-collapse: separate;
+    border-spacing: 0px 0px;
+    caption-side: top;
+    empty-cells: show;
+    table-layout: auto;
+
+    /* Miscellaneous */
+    overflow: visible;
+    cursor: pointer;
+    visibility: visible;
+
+    /* Effects */
+    transform: none;
+    transition: all 0s ease 0s;
+    outline: rgb(255, 0, 0) dashed 0.666667px;
+    outline-offset: 0px;
+    box-sizing: content-box;
+    resize: none;
+    text-shadow: none;
+    text-overflow: clip;
+    word-wrap: normal;
+    box-shadow: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+
+
+}
+
+AudioRecording{
+    width:1000px;
+    height:1000px;
+    background:#000000;
+    z-index: 30000;
+    visibility: visible;
+    position: absolute;
+    color: #ebebeb;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#micmask{
+    /*width: 200px;*/
+    /*height: 200px;*/
+    color: #ebebeb;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}

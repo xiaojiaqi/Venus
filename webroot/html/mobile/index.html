@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/style.css?__inline" rel='stylesheet' type='text/css' />
+    <script src="../../dist/jquery-2.2.4.js"></script>
+    <script src="../js/domain.js"></script>
+    <script src="../../dist/js/index_mob.js"></script>
+</head>
+<body style=" background-repeat:no-repeat ; background-size:100% 100%; background-attachment: fixed; ">
+    <!--SIGN UP-->
+    <h1>登录系统</h1>
+    <div class="login-form">
+        <div class="close"></div>
+        <div class="head-info">
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
+        </div>
+        <div class="clear"></div>
+        <div class="avtar">
+            <img src="../images/avtar.png?__inline" />
+        </div>
+        <form action="check.html">
+            <input type="text" class="text" value="10000" id="username" placeholder="请输入账号 它应该是一个数字 比如1000"
+                onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}">
+            <div class="key">
+                <input type="password" value="20000" id="password" placeholder="请输入密码" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Password';}">
+            </div>
+        </form>
+        <div class="signin">
+            <input type="submit" id="a1" value="登录">
+        </div>
+
+        <div class="signin">
+            <input type="submit" id="a2" value="注册">
+        </div>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2018 John All rights reserved.</p>
+    </div>
+    <script>
+    </script>
+</body>
+</html>

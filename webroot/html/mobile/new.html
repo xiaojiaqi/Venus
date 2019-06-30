@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>注册新用户</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/style.css?__inline" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../../dist/css/layui.css">
+    <script src="../../dist/jquery-2.2.4.js"></script>
+    <script src="../../dist/layui.js"></script>
+    <script src="../js/domain.js"></script>
+    <script src="../../dist/js/new_pc.js"></script>
+</head>
+
+<body style="background-repeat:no-repeat; background-size:100% 100%; background-attachment: fixed;">
+    <h1>登录系统</h1>
+    <div class="login-form">
+        <div class="close"></div>
+        <div class="head-info">
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
+        </div>
+        <div class="clear"></div>
+        <div class="avtar">
+            <img id="f1" src="../../header/2.png" style=" width: 40px;  height: 40px;" />
+            <img id="header" src="../../header/small/00001.jpg" style="width: 180px; height: 180px;" />
+            <img id="f2" src="../../header/1.png" style="width: 40px; height: 40px;" />
+        </div>
+        <form>
+            <input type="text" class="text" value="" id="nickname" placeholder="请输入你的昵称" onfocus="this.value = '';"
+                onblur="if (this.value == '') {this.value = 'Username';}">
+            <div class="key">
+                <input type="text" value="" id="passwd" placeholder="请输入密码" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Password';}">
+                <input type="text" value="" id="sign" placeholder="用一句话描述一下自己把" onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'abc';}">
+            </div>
+        </form>
+        <div class="signin">
+            <input type="submit" id="a2" value="注册">
+        </div>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2018 John All rights reserved.</p>
+    </div>
+</body>
+</html>

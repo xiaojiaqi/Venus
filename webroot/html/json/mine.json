@@ -1,0 +1,20 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "mine": {
+      "username": "天马流星",
+      "id": "100000",
+      "status": "online",
+      "sign": "天马流星",
+      "avatar": "/header/00086.jpg"
+    },
+
+    "friend": [{
+      "groupname": "我的好友"
+    ,"id": 1
+    ,"online": 0
+    ,"list": [  ]
+    }]
+  }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PC版</title>
+    <link rel="stylesheet" href="../../dist/css/layui.css?__inline">
+    <link rel="stylesheet" href="../css/checkbox.min.css?__inline">
+    <style>
+        video {
+            background: black;
+            border: 1px solid gray;
+        }
+
+        .page {
+            position: relative;
+            display: block;
+            margin: 0 auto;
+            width: 500px;
+            height: 500px;
+        }
+
+        #yours {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        #theirs {
+            width: 500px;
+            height: 500px;
+        }
+
+        .copy-rights {
+            position: fixed;
+            /*or前面的是absolute就可以用*/
+            bottom: 0px;
+        }
+
+
+        #table-1 thead,
+        #table-1 tr {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: rgb(230, 189, 189);
+        }
+
+        #table-1 {
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(230, 189, 189);
+        }
+
+        /* Padding and font style */
+        #table-1 td,
+        #table-1 th {
+            padding: 5px 10px;
+            font-size: 12px;
+            font-family: Verdana;
+            color: rgb(177, 106, 104);
+        }
+
+        /* Alternating background colors */
+        #table-1 tr:nth-child(even) {
+            background: rgb(238, 211, 210)
+        }
+
+        #table-1 tr:nth-child(odd) {
+            background: #FFF
+        }
+
+
+        AudioRecording {
+            width: 1000px;
+            height: 1000px;
+            background: #000000;
+            z-index: 30000;
+            visibility: visible;
+            position: absolute;
+            color: #ebebeb;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        #micmask {
+
+            color: #ebebeb;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+    <script src="../../dist/layui.js" defer></script>
+    <script src="../../dist/jquery-2.2.4.js?__inline" defer></script>
+    <script src="../js/domain.js"></script>
+    <script src="../../html/js/adapter-latest.js?__inline"></script>
+    <script src="../../html/js/recorder.js?__inline"></script>
+    <script src="../../dist/js/main_pc.js?__inline"></script>
+</head>
+
+<body style=" background-repeat:no-repeat ; background-size:100% 100%; background-attachment: fixed; ">
+    <div id="call-page" style="visibility:hidden"
+        style=" background-repeat:no-repeat ; background-size:100% 100%; background-attachment: fixed; ">
+        <div class="page">
+            <video id="yours" autoplay></video>
+            <video id="theirs" autoplay></video>
+            <button id="hang-up">挂机</button>
+            <div id="remotemessage"></div>
+        </div>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2018 John All rights reserved.</p>
+    </div>
+    <script type="text/javascript">
+        /*显示浮动框*/
+        function showCommentDiv(obj) {
+            var top = $(obj).offset().top;
+            var left = $(obj).offset().left + $(obj).width() - 7;
+            $("#commentListDiv").css({ 'top': top + "px", 'left': left + "px" }).show("slow");
+        }
+
+        function showThis(obj) {
+            $(obj).show();
+        }
+        /*隐藏浮动框*/
+        function hideCommentDiv() {
+            $("#editCourseDiv").hide();
+        }
+        function hideThis(obj) {
+            $(obj).hide();
+        }
+        //获取选中的评语
+        function getValue(obj) {
+            var selectId = obj.value;
+            var selectTitle = obj.title;
+            $("#teaMarkContent").val(selectTitle);
+        }
+    </script>
+</body>
+</html>
