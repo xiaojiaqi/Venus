@@ -143,6 +143,37 @@ https://www.meetyoucn.com
 
 
 
+如何使用docker 运行？
+
+docker 的使用很简单。
+使用 docker push xiaojiaqi/venus:0.1.0 下载镜像！
+
+https://cloud.docker.com/repository/registry-1.docker.io/xiaojiaqi/venus
+
+3 种情况
+
+第一种， 我就是用镜像测试一下
+首先，假设你没有域名，那么你需要找一个 上图里的 ip，作为你的服务器。
+比如你本地服务器 ip 是 192.168.2.2 那么 www22.meetyoucn.com 就是你可以用的域名
+
+运行一下命令 就 ok 了
+sudo docker run --env WEBHOST=www22.meetyoucn.com -p 80:80 -p 443:443 -p 8888:8888 -p 8090:8090 -p 8091:8091 -d xiaojiaqi/venus:0.1.0
+这种玩法的缺点在于，容器重启 资料就没了。
+
+第二种情况， 我本地有一个 redis 服务器，我想把数据保留下来
+假设我的 redis 是 192.168.1.1 我的本地服务器还是 192.168.2.2, 那么域名就仍然是 www22.meetyoucn.com
+
+运行以下命令
+sudo docker run --env WEBHOST=www22.meetyoucn.com --env REDIS=192.168.1.1:6379 -p 80:80 -p 443:443 -p 8888:8888 -p 8090:8090 -p 8091:8091 -d xiaojiaqi/venus:0.1.0
+
+第三种情况， 我有一个自己的证书， 我想用自己的域名
+那么你需要把 cert.pem key.pem 两个挂载进系统
+
+差不多就是这样
+
+sudo docker run -v /local/cert.pem:/app/cert.pem -v /local/key.pem:/app/key.pem --env WEBHOST=www.myhost.com --env REDIS=192.168.2.30:6379 -p 80:80 -p 443:443 -p 8888:8888 -p 8090:8090 -p 8091:8091 -d xiaojiaqi/venus:0.1.0
+
+
 源码的话，看大家反应吧，如果星多就逐步发布吧。
 
 有任何问题 都可以邮件  xiaojiaqi.cn#gmail.com
